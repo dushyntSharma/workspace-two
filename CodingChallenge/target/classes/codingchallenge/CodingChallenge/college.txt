@@ -1,0 +1,6 @@
+College [cid=1, name=svce, strength=2, student=[Student [sid=101, sname=shree, age=22, subject=arts, cid=1], Student [sid=102, sname=vignesh, age=23, subject=science, cid=1]]]
+College [cid=2, name=sdf, strength=2, student=[Student [sid=222, sname=sdf, age=22, subject=sdf, cid=2], Student [sid=333, sname=sdfsd, age=33, subject=dsf, cid=2], Student [sid=666, sname=sdfsdf, age=32, subject=sdfsd, cid=2]]]
+College [cid=3, name=SVCE, strength=2, student=[Student [sid=65, sname=Shreedahr, age=50, subject=arts, cid=3]]]
+College [cid=4, name=MDF, strength=2, student=[Student [sid=122, sname=Vinay, age=23, subject=commerce, cid=4]]]
+College [cid=5, name=RVCE, strength=1, student=[Student [sid=6, sname=Dhanya, age=15, subject=Maths, cid=5], Student [sid=17, sname=Arpitha, age=23, subject=Science, cid=5]]]
+College [cid=6, name=SVCE, strength=2, student=[Student [sid=555, sname=shree, age=22, subject=java, cid=6]]]
