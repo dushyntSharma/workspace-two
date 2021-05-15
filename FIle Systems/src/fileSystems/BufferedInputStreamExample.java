@@ -14,7 +14,7 @@ public class BufferedInputStreamExample {
 		// Reading data from key-board
 		inputStream.read(bytes);
 		// Creating BufferedOutputStream object
-		FileOutputStream out = new FileOutputStream("D:/myFile.txt");
+		FileOutputStream out = new FileOutputStream("myFile.txt");
 		BufferedOutputStream outputStream = new BufferedOutputStream(out);
 		// Writing data to the file
 		outputStream.write(bytes);
