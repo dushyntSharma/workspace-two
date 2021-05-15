@@ -1,16 +1,21 @@
 package com.mindtree.com.FilesCapability.dao;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 import com.mindtree.com.FilesCapability.model.Employee;
 import com.mindtree.com.FilesCapability.services.GetCSVReader;
+import com.opencsv.CSVWriter;
 
 public class EmployeeDaoImpl {
 	private static String JDBCURL = "jdbc:mysql://127.0.0.1:3306/FileCapability";
@@ -47,6 +52,38 @@ public class EmployeeDaoImpl {
 			System.out.println(e1.getMessage());
 		}
 
+	}
+
+	public static void writeToCSV() throws SQLException, IOException {
+		// Getting the connection
+
+		Connection con = null;
+
+		con = DriverManager.getConnection(JDBCURL, USERNAME, PASSWORD);
+		String sql = "select * from filecsv;";
+		System.out.println("Connection established......");
+		// Creating the Statement
+		Statement stmt = con.createStatement();
+
+		ResultSet rs = stmt.executeQuery(sql);
+		// Instantiating the CSVWriter class
+		CSVWriter writer = new CSVWriter(new FileWriter("output.csv"));
+		ResultSetMetaData Mdata = rs.getMetaData();
+		Mdata.getColumnName(1);
+		// Writing data to a csv file
+		String line1[] = { Mdata.getColumnName(1), Mdata.getColumnName(2), Mdata.getColumnName(3) };
+		writer.writeNext(line1);
+		String data[] = new String[5];
+		while (rs.next()) {
+			data[0] = rs.getString("Name");
+			data[1] = rs.getString("Company");
+			data[2] = rs.getString("Place");
+
+			writer.writeNext(data);
+		}
+		// Flushing data from writer to file
+		writer.flush();
+		System.out.println("Data Entered to the CSV File");
 	}
 
 }
