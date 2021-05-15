@@ -51,6 +51,18 @@ public class EmployeeDaoImpl {
 			// TODO Auto-generated catch block
 			System.out.println(e1.getMessage());
 		}
+		//close the resources
+		finally {
+			try {
+				st.close();
+				con.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+
+			}
+
+		}
 
 	}
 
