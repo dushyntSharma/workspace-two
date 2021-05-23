@@ -1,7 +1,6 @@
 package collegecodingchallenge.CollegeCodingChallenge.client;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,9 +9,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-import java.util.TreeSet;
-
-import com.opencsv.CSVWriter;
 
 import collegecodingchallenge.CollegeCodingChallenge.exceptions.ConnectionFailedException;
 import collegecodingchallenge.CollegeCodingChallenge.exceptions.ExceedingStrengthOfStudents;
@@ -37,7 +33,7 @@ public class CollegeApp {
 			switch (choice) {
 			case 1:
 				String s = null;
-				;
+
 				try {
 					s = addCollegeDetails();
 
@@ -89,7 +85,9 @@ public class CollegeApp {
 				System.out.println("==========================================");
 
 				// displaying using the filter...
-				clg.stream().filter(t -> t.getCid() < 10).forEach(t -> System.out.println(t));
+				System.out.println(clg.toString());
+				// clg.stream().filter(t -> t.getCid() < 10).forEach(t ->
+				// System.out.println(t));
 				break;
 
 			case 3:

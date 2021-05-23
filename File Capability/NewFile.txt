@@ -1,2 +1,0 @@
-Shreevatsa,23,Mindtree,Sagar
-Vignesh,26,Wipro,Bangalore
