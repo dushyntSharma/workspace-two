@@ -119,7 +119,7 @@ public class CollegeDaoImpl implements CollegeDao {
 			while (res.next()) {
 				String name = res.getString("sname");
 				String age = res.getString("age");
-				clg.put(age, name);
+				clg.put("Age:" + age, "Name:"+name);
 
 			}
 			Map<String, String> map = new TreeMap<String, String>(clg);
