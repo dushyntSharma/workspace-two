@@ -57,7 +57,7 @@ public class CollegeApp {
 
 				System.out.println("==========================================");
 
-				clg.stream().filter(t -> t.getCid() < 5).forEach(t -> System.out.println(t));
+//				clg.stream().filter(t -> t.getCid() < 5).forEach(t -> System.out.println(t));
 				break;
 
 			case 3:

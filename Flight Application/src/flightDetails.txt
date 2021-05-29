@@ -1,0 +1,9 @@
+International Flights -> 25 Flights
+Domestic Flights -> 40 Flights
+Private Flights -> 5 Flights
+
+Some International Flights Are ->
+Emirates, Qatar, Thai, Etihad, Singapore, Malaysia
+
+Some Domestic Flights are ->
+IndiGo, Air India, SpiceJet, GoAir, AirAsia, Vistara, TruJet

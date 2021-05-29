@@ -1,0 +1,6 @@
+Sno     Team     Cost     
+1.0     Hyd     25000.0     
+2.0     Rajastan     20000.0     
+3.0     Kerala     22000.0     
+4.0     Gujarath     21000.0     
+
